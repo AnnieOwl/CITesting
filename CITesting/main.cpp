@@ -2,6 +2,7 @@
 #include <QtCore/QCoreApplication>
 #include <QString>
 #include "exitcodetest.h"
+#include <iostream>
 
 int main(int argc, char *argv[])
 {
@@ -14,6 +15,8 @@ int main(int argc, char *argv[])
     }
 
     ExitCodeTest exitCodeTest(returnCode);
+
+    std::cout << "Current return code: " << returnCode << std::endl;
 
     return a.exec();
 }
